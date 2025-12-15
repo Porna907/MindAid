@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindAid – Your Mental Wellness Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Mind<span>Aid</span></div>
+      <nav class="nav">
+        <a href="#mood-tracker">Mood Tracker</a>
+        <a href="#mental-first-aid">Mental First Aid</a>
+        <a href="#learning-resources">Learning Resources</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>MindAid</h1>
+          <p>
+            A gentle companion to help you track your moods, access mental first aid
+            guidance, and learn tools for emotional resilience.
+          </p>
+          <button id="get-started-btn" class="primary-btn">
+            Get Started
+          </button>
+        </div>
+        <div class="hero-illustration">
+          <div class="bubble bubble-1">Breathe</div>
+          <div class="bubble bubble-2">Reflect</div>
+          <div class="bubble bubble-3">Reach Out</div>
+          <div class="hero-card">
+            <p>“Small daily check-ins can make a big difference.”</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mood-tracker" class="panel">
+        <div class="panel-header">
+          <h2>Mood Tracker</h2>
+          <p>Track how you feel over time and notice patterns.</p>
+        </div>
+        <div class="panel-body grid-2">
+          <form id="mood-form" class="card">
+            <h3>Log your mood</h3>
+            <label>
+              Date
+              <input type="date" id="mood-date" required />
+            </label>
+            <label>
+              Mood level
+              <input
+                type="range"
+                id="mood-level"
+                min="1"
+                max="5"
+                value="3"
+              />
+              <div class="mood-scale">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+            </label>
+            <label>
+              Notes (optional)
+              <textarea
+                id="mood-notes"
+                rows="3"
+                placeholder="What’s contributing to your mood today?"
+              ></textarea>
+            </label>
+            <button type="submit" class="primary-btn full-width">
+              Save Mood
+            </button>
+            <p class="helper-text">
+              Data is stored locally on your server/database and is private to you.
+            </p>
+          </form>
+
+          <div class="card">
+            <h3>Recent moods</h3>
+            <ul id="mood-list" class="mood-list"></ul>
+            <p id="mood-empty" class="empty-state">
+              No entries yet. Start by logging how you feel today.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mental-first-aid" class="panel">
+        <div class="panel-header">
+          <h2>Mental First Aid Support</h2>
+          <p>
+            Quick, practical guidance for moments of distress. This is not a
+            replacement for professional help or emergency services.
+          </p>
+        </div>
+        <div class="panel-body grid-2">
+          <div class="card">
+            <h3>Grounding & Support</h3>
+            <div class="tips-list" id="first-aid-tips">
+              <!-- Filled from JS -->
+            </div>
+            <div class="disclaimer">
+              <strong>Crisis support:</strong> If you are in immediate danger,
+              please contact your local emergency number or a trusted crisis
+              helpline in your country.
+            </div>
+          </div>
+
+          <form id="support-form" class="card">
+            <h3>Write it out</h3>
+            <p class="helper-text">
+              Describe what you’re going through. This will be saved so you can
+              reflect later or share with a professional.
+            </p>
+            <label>
+              Title
+              <input
+                type="text"
+                id="support-title"
+                placeholder="e.g. Feeling overwhelmed at work"
+                required
+              />
+            </label>
+            <label>
+              What’s happening?
+              <textarea
+                id="support-description"
+                rows="5"
+                placeholder="Write a few sentences about how you feel and what led up to this moment."
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="primary-btn full-width">
+              Save Reflection
+            </button>
+            <div id="support-status" class="status-text"></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="learning-resources" class="panel">
+        <div class="panel-header">
+          <h2>Learning Resources</h2>
+          <p>
+            Short, practical resources to help you understand and manage your mental health.
+          </p>
+        </div>
+        <div id="resources-grid" class="resources-grid">
+          <!-- Filled from JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>MindAid is an educational tool and not a substitute for professional care.</p>
+      <p>&copy; <span id="year"></span> MindAid</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
+

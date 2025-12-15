@@ -1,0 +1,26 @@
+{
+  "name": "mindaid",
+  "version": "1.0.0",
+  "description": "MindAid – Mood Tracker, Mental First Aid Support, and Learning Resources",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "inspect": "node inspect-db.js"
+  },
+  "keywords": [
+    "mental-health",
+    "mood-tracker",
+    "node",
+    "express",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
+
+
